@@ -1,3 +1,4 @@
+import { GrFormClose } from "react-icons/gr"; 
 import { BsFillEyeSlashFill } from "react-icons/bs"; 
 import { BsFillEyeFill } from "react-icons/bs"; 
 import Logo from "../components/logo"
@@ -30,8 +31,51 @@ const Login = () => {
     },
   ]
   return (
+    <>
+    <div className="md:hidden grid grid-cols-12">
+      <div className="fixed px-6 pt-5 overscroll-contain top-8 left-4 right-4 bottom-4 bg-[#F9E9FC] shadow-[0_0_30px_rgba(0,0,0,0.2)] rounded-xl border-[#16181863] " >
+        <div className="flex justify-between items-center" >
+          <GrFormClose className="text-3xl" />
+          <Logo f="Uni" l="Nova" styles="text-color4 text-logo1" lstyles="text-black " />
+        </div>
+       <div className="mt-10" >
+          <p className="text-color3 text font-[1000] text-[2rem]" >Welcome back,</p>
+          <p className="text-color3 -mt-3 text-xl font-bold" >Dear😇  </p>
+          <p className="text-color3 text-sm font-bold" >login to access your account</p>
+          </div>
+          <div>
+            <p className="font-bold text-2xl mt-5" >Login</p>
+            <p className="font-bold text-xs " >enter your account details</p>
+            <form onSubmit={ handleLogin } >
+                  <div className="mt-7 " >
+                    <div>
+                      <Input type={"text"} name={"indexnumber"} placeholder={"index number"} styles={"bg-transparent border-b border-gray-700 p-3 w-full"} />
+                    </div>
+                    <div className="flex" >
+                      <Input type={password} name={"password"} placeholder={"password"} styles={"bg-transparent w-full border-b mt-5 border-gray-700 p-3 "} />
+                      <div className=" flex items-end -ml-7 mb-1" >
+                      {
+                        password == "password" ? <BsFillEyeFill onClick={() => setPassword("text")} className="text-lg text-gray-700" /> : <BsFillEyeSlashFill onClick={() => setPassword("password")} className="text-lg text-gray-700" />
+                      }
+                      </div>
+                  </div>
+                      <div className="flex justify-center mt-10">
+                        <button className="bg-[#1C2020] rounded-[7px] p-2 w-full text-[#F4F4F4] font-extrabold" >Login</button>
+                      </div>
+                  </div>
+              </form>
+              <div className="mt-10 items-end flex  justify-between" >
+                <a href="" className="text-xs" >Forgot password</a> <button className="text-color6 bg-[#F68D88] p-2 font-extrabold text-[13px] rounded-[7px] w-[100px]" >sign up</button>
+              </div>
+          </div>
+      </div>
+     <div className="col-span-4 bg-[#1A1E1E] min-h-screen"></div>
+     <div className="col-span-8 bg-[#F2E3F5]" >
+      
+     </div>
+    </div>
     <div className="hidden md:grid grid-cols-12 min-h-screen" >
-      <div className="background-color5 col-span-5 pl-5" >
+      <div className="background-color5 col-span-5 pl-12" >
         <div className="h-16 flex items-center pl-24 " >
           <Logo f="Uni" l="Nova" styles="text-color4 text-logo1" lstyles="text-color6"  />
         </div>
@@ -41,7 +85,7 @@ const Login = () => {
             <div className="mt-28" >
               <p className="text-color6 font-bold" >
                 University Management System
-            </p>
+              </p>
              {/* Form */}
             <div className="text-xs text-white" >
               <p className="font-bold mt-12" >enter your account details</p>
@@ -59,18 +103,18 @@ const Login = () => {
                       </div>
                   </div>
                       <div className="flex justify-center mt-10">
-                        <button className="background-color7 p-2 w-full rounded-md text-color3 font-extrabold" >Login</button>
+                        <button className="background-color7 rounded-[7px] p-2 w-full text-color3 font-extrabold" >Login</button>
                       </div>
                   </div>
               </form>
               <div className="mt-10 items-end flex w-3/4 justify-between" >
-                    <a href="" className="text-xs" >Forgot password</a> <button className="text-color6 background-color3 p-2 font-extrabold text-[13px] rounded-md w-[100px]" >sign up</button>
+                    <a href="" className="text-xs" >Forgot password</a> <button className="text-color6 bg-[#F68D88] p-2 font-extrabold text-[13px] rounded-[7px] w-[100px]" >sign up</button>
               </div>
               </div>
             </div>
         </div>
       </div>
-      <div className="background-color8 col-span-7 pr-5 " >
+      <div className="background-color8 col-span-7 pr-12 " >
         <div className="h-16 pl-5 flex items-center " >
           <Navbar links={links || []} />
         </div>
@@ -91,6 +135,7 @@ const Login = () => {
       </div>
       </div>
     </div>
+    </>
   )
 }
 

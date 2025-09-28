@@ -6,6 +6,7 @@ import Announcement from "../../components/announcement"
 import Calendar from 'react-calendar'
 import "react-calendar/dist/Calendar.css"
 import assets from "../../assets/assets"
+import TimesTable from "../../components/times-table"
 
 
 const Dashboardpage = ({onChangeCalendar,valueCalendar,assignmentData,messagesData,dailyScheduleData}) => {
@@ -112,57 +113,7 @@ const Dashboardpage = ({onChangeCalendar,valueCalendar,assignmentData,messagesDa
                  <Cardinfo color1={"#DAC1DE"} color2={"#F8DBFD"} title={"Daily Schedules"} data={dailyScheduleData} />
               </div>
             </div>
-            <div className="mt-5 h-80 text-white mb-14 px-5 bg-[#01032D] shadow-[0_0_30px_rgba(0,0,0,0.2)] rounded-xl  overflow-hidden" >
-              <p className="font-bold mt-2" >Today&apos;s TimeTable</p>
-              <div className="flex justify-between font-bold text-sm mt-2">
-                <div className="w-full">Day</div>
-                <div className="w-full">Time</div>
-                <div className="w-full">Lecture Hall</div>
-                <div className="w-full">Course</div>
-              </div>
-              <div className="flex border-b mt-5 font-bold justify-between">
-                <div className="w-full">Monday</div>
-                <div className="w-full">10:30am</div>
-                <div className="w-full">SFR4</div>
-                <div className="w-full">Programming with C++</div>
-              </div>
-              <div className="flex border-b mt-1 font-bold justify-between">
-                <div className="w-full">Monday</div>
-                <div className="w-full">10:30am</div>
-                <div className="w-full">SFR4</div>
-                <div className="w-full">Programming with C++</div>
-              </div>
-              <div className="flex border-b mt-1 font-bold justify-between">
-                <div className="w-full">Monday</div>
-                <div className="w-full">10:30am</div>
-                <div className="w-full">SFR4</div>
-                <div className="w-full">Programming with C++</div>
-              </div>
-              <div className="flex border-b mt-1 font-bold justify-between">
-                <div className="w-full">Monday</div>
-                <div className="w-full">10:30am</div>
-                <div className="w-full">SFR4</div>
-                <div className="w-full">Programming with C++</div>
-              </div>
-              <div className="flex border-b mt-1 font-bold justify-between">
-                <div className="w-full">Monday</div>
-                <div className="w-full">10:30am</div>
-                <div className="w-full">SFR4</div>
-                <div className="w-full">Programming with C++</div>
-              </div>
-              <div className="flex border-b mt-1 font-bold justify-between">
-                <div className="w-full">Monday</div>
-                <div className="w-full">10:30am</div>
-                <div className="w-full">SFR4</div>
-                <div className="w-full">Programming with C++</div>
-              </div>
-              <div className="flex border-b mt-1 font-bold justify-between">
-                <div className="w-full">Monday</div>
-                <div className="w-full">10:30am</div>
-                <div className="w-full">SFR4</div>
-                <div className="w-full">Programming with C++</div>
-              </div>
-            </div>
+           <TimesTable />
             <p className="text-sm -mb-6 text-[#B2B4B9] font-bold" >Copyright&copy; {`${new Date().getFullYear()}`}.All rights reserved</p>
           </div>
   )

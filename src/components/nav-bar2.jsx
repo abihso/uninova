@@ -7,7 +7,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import assets from "../assets/assets"
 import Logo from "./logo"
 import Searchbar from "./search-bar"
-const Navbar2 = ({items,setPage,setProfileModal,profileModal}) => {
+const Navbar2 = ({items,setPage,setProfileModal,profileModal,setActivePage,activePage}) => {
   
   return (
     <nav className="flex  min-h-14 background-color4" >
@@ -15,9 +15,9 @@ const Navbar2 = ({items,setPage,setProfileModal,profileModal}) => {
           <Logo f="Uni" l="Nova" styles="text-color4 text-logo1" lstyles="text-color6" />
           <Searchbar />
         </div>
-        <div className="flex justify-end w-full" >
+        <div className="flex gap-1 justify-end w-full" >
           {
-          items.map((tap, index) => (<div onClick={()=>setPage(tap.to)} className="flex cursor-pointer hover:border-t-[5px] hover:rounded-b-lg border-[#FFE1FF] hover:bg-[#424C58] gap-1 px-4 items-center text-white font-bold text-xs" key={index}>
+          items.map((tap, index) => (<div onClick={() => { setPage(tap.to); setActivePage(tap.to)}} className={activePage == tap.to ? `flex cursor-pointer border-t-[5px] rounded-b-lg border-[#FFE1FF] bg-[#424C58] gap-2 px-4 items-center text-white font-bold text-xs` : `flex cursor-pointer hover:border-t-[5px] transition-all hover:rounded-b-lg border-[#FFE1FF] hover:bg-[#424C58] gap-2 px-4 items-center text-white font-bold text-xs`} key={index}>
               <div className="" >
                 <img src={tap.logo}  alt="" />
               </div>

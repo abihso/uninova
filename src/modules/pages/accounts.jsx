@@ -1,7 +1,8 @@
 
 const Accounts = () => {
   return (
-    <div className="background-color10 min-h-screen pb-10 px-5">
+    <>
+      <div className="hidden md:grid background-color10 min-h-screen pb-10 px-5">
       <div className="min-h-40 flex justify-center " >
         <div className="-mt-36 w-full" >
           <div className="background-color10 pb-20  py-2 px-5 min-h-40 shadow-[0_0_30px_rgba(0,0,0,0.2)] rounded-xl border-[#16181863]" >
@@ -151,6 +152,7 @@ const Accounts = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -2,7 +2,8 @@ import Input from "../../components/input"
 
 const CoruseRegistrationPage = () => {
   return (
-    <div className="background-color10 min-h-screen pb-10 px-5">
+    <>
+    <div className="hidden md:grid background-color10 min-h-screen pb-10 px-5">
       <div className="min-h-40 border flex justify-center " >
         <div className="background-color10 min-h-56 w-[500px] px-7 py-4 -mt-32 shadow-[0_0_30px_rgba(0,0,0,0.2)] rounded-xl border-[#16181863]">
           <p className="font-bold text-lg" >Course Registration</p>
@@ -32,6 +33,7 @@ const CoruseRegistrationPage = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -31,7 +31,7 @@ const Dashboardpage = ({onChangeCalendar,valueCalendar,assignmentData,messagesDa
                 <Announcement />
               </div>
               <div className="col-span-4 flex h-96 shadow-[0_0_30px_rgba(0,0,0,0.2)] rounded-xl pt-7 overflow-hidden " >
-                <Calendar  onChange={onChangeCalendar} value={valueCalendar} />
+                <Calendar className="w-full h-full"  onChange={onChangeCalendar} value={valueCalendar} />
               </div>
             </div>
             <div  className="grid grid-cols-12 gap-3" >

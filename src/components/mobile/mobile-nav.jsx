@@ -2,8 +2,7 @@ import { BiMenu } from "react-icons/bi";
 /* eslint-disable react/prop-types */
 import Logo from "../../components/logo";
 import assets from "../../assets/assets";
-import { CgMenu } from "react-icons/cg";
-const Mobilenav = ({setSideBar}) => {
+const Mobilenav = ({setSideBar,setPage}) => {
   return (
     <div className="min-h-12 fixed top-0 grid grid-cols-12 items-center px-4 w-full bg-[#1C2020]" >
       <div className="col-span-4">
@@ -20,7 +19,7 @@ const Mobilenav = ({setSideBar}) => {
                 <div> 
                   <img width={20} src={assets["letter-logo"]}/>
                 </div>
-                <div> 
+                <div onClick={() => setPage("change-password")} > 
                   <img width={20} src={assets["settings2-logo"]}/>
                 </div>
               </div>

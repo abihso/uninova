@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
 import Input from "../../components/input"
-import Mobilenav from "../../components/mobile/mobile-nav"
-const ChangePasswordPage = ({setSideBar = false}) => {
+const ChangePasswordPage = () => {
   return (
     <>
       <div className="md:hidden" >
-        <Mobilenav setSideBar={() => setSideBar(prev => !prev)} />
         <div className="flex justify-center my-5 items-center" >
            <p className="font-bold text-xl" >University Management system</p>
         </div>
@@ -29,7 +27,7 @@ const ChangePasswordPage = ({setSideBar = false}) => {
             
               <div className="flex gap-5 mt-4 mb-5" >
                 <button className="bg-[#5C5DA4] rounded px-4 p-2 text-white font-bold" type="submit" >Submit</button>
-                <button className="font-bold" >Cancel</button>
+                <button type="reset" className="font-bold" >Cancel</button>
               </div>
             </form>
             <a className="font-bold" >

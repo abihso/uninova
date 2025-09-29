@@ -53,7 +53,7 @@ const Dashbaoard = () => {
      if (page == "register") {
       return <CoruseRegistrationPage />
     } else if (page == "examination") {
-     return <Examination />
+     return <Examination setPage={setPage}  />
     }else if (page == "accounts") {
      return <Accounts />
     } else if (page == "results") {
@@ -64,7 +64,6 @@ const Dashbaoard = () => {
        return   <MobileDashboard dailyScheduleData={dailyScheduleData} />
     }
   }
-  // <MobileDashboard dailyScheduleData={dailyScheduleData} />
   const assignmentData = [
     {
       description: "Mr. Godfred Kusi[mentor]",
@@ -121,6 +120,42 @@ const Dashbaoard = () => {
       name: "Register",
       icon: assets["schedules-logo"],
       page:"register",
+      active: setActivePage,
+      icon2 : <GiArchiveRegister className="text-2xl text-[#DD6B6B]" />
+    },
+  ]
+  const mobileSideBarTaps = [
+    {
+      name: "Accounts",
+      icon: assets["accounts-logo"],
+      page: "accounts",
+      active: setActivePage,
+      icon2 : <MdOutlineAccountBalance className="text-2xl text-[#DD6B6B]"/>
+    },
+    {
+      name: "Schedules",
+      icon: assets["schedules-logo"],
+      active: setActivePage,
+      icon2: <BiCoinStack className="text-2xl text-[#DD6B6B]" />
+    },
+    {
+      name: "Results",
+      icon: assets["schedules-logo"],
+      page:"results",
+      active: setActivePage,
+      icon2: <AiOutlineFileAdd className="text-2xl text-[#DD6B6B]" />
+    },
+    {
+      name: "Register",
+      icon: assets["schedules-logo"],
+      page:"register",
+      active: setActivePage,
+      icon2 : <GiArchiveRegister className="text-2xl text-[#DD6B6B]" />
+    },
+    {
+      name: "Examination",
+      icon: assets["schedules-logo"],
+      page:"examination",
       active: setActivePage,
       icon2 : <GiArchiveRegister className="text-2xl text-[#DD6B6B]" />
     },
@@ -191,7 +226,7 @@ const Dashbaoard = () => {
                 </div>
               </div>
               <div className="border-l-4 mt-7 mb-5 border-[#1C2020] h-14" >
-                <div className="flex gap-3 items-center border-2 border-[#FFCFD3] h-full pl-5 w-4/5 rounded-[10px] ml-[2px] bg-[#E9CEEE]" >
+                <div onClick={() => { setPage(""); setSideBar(false)}} className="flex gap-3 items-center border-2 border-[#FFCFD3] h-full pl-5 w-4/5 rounded-[10px] ml-[2px] bg-[#E9CEEE]" >
                   <MdDashboard className="text-2xl text-[#A630A4]" />
                   <p className="font-extrabold text-xl text-[#415760]" >
                     Dashboard
@@ -199,8 +234,8 @@ const Dashbaoard = () => {
                 </div>
               </div>
               {
-                sideBarTaps.map((item, index) => (
-                  <div key={index} className="h-10" >
+                mobileSideBarTaps.map((item, index) => (
+                  <div onClick={() => { setPage(item.page);  setSideBar(false)}} key={index} className="h-10" >
                     <div className="flex gap-3 items-center h-full pl-5 w-4/5 rounded-[10px] ml-[10px]" >
                      {item.icon2}
                       <p className="font-bold text-xl text-[#415760]" >
@@ -223,7 +258,7 @@ const Dashbaoard = () => {
                 <a href="" className="text-[#B6B6BC]" > Help Center </a>
             </div>
         </div>}
-        <Mobilenav setSideBar={setSideBar} />
+        <Mobilenav setSideBar={setSideBar} setPage = {setPage} />
         <div className="min-h-[1500px] px-5 pt-16 " >
           {renderMobilePage()}
         </div>

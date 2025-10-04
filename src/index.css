@@ -70,4 +70,17 @@
 
 
 
+.oi{
+  font-family: "Oi", serif;
+  font-weight: bolder;
+  font-style:normal;
+  font-size: x-large;
+}
 
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

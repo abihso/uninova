@@ -74,14 +74,14 @@ const Login = () => {
       
      </div>
     </div>
-    <div className="hidden md:grid grid-cols-12 min-h-screen" >
-      <div className="background-color5 col-span-5 pl-12" >
+    <div className="hidden md:grid grid-cols-12 min-h-screen inter" >
+      <div className="background-color5 col-span-4 pl-12" >
         <div className="h-16 flex items-center pl-24 " >
-          <Logo f="Uni" l="Nova" styles="text-color4 text-logo1" lstyles="text-color6"  />
+            <Logo f="Uni" l="Nova" styles="oi text-color4 text-logo1" lstyles="text-color6 inter"  />
         </div>
        
         <div className="border border-[#16181863] pl-14 shadow-[0_0_30px_rgba(0,0,0,0.55)] mt-2
-         h-[700px] rounded-l-2xl background-color4" >
+         h-5/6 rounded-l-2xl background-color4" >
             <div className="mt-28" >
               <p className="text-color6 font-bold" >
                 University Management System
@@ -114,14 +114,14 @@ const Login = () => {
             </div>
         </div>
       </div>
-      <div className="background-color8 col-span-7 pr-12 " >
+      <div className="background-color8 col-span-8 pr-12  " >
         <div className="h-16 pl-5 flex items-center " >
           <Navbar links={links || []} />
         </div>
         <div className="border border-[#16181863] pl-5 shadow-[0_0_30px_rgba(0,0,0,0.55)] mt-2
-         min-h-[700px] rounded-r-2xl background-color8">
+         h-5/6 rounded-r-2xl background-color8">
             <div className="mt-20" >
-              <p className="text-color3 text font-extrabold text-[5rem]" >Welcome back,</p>
+              <p className="text-color3 font-extrabold text-[5rem]" >Welcome back,</p>
               <p className="pl-3 text-color3 -mt-5 text-3xl font-bold" >Dear😇  </p>
               <p className="pl-3 text-color3 font-bold" >login to access your account</p>
           </div>
